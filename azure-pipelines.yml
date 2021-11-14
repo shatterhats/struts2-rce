@@ -12,21 +12,3 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    allowBrokenSymlinks: false
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
-    sqMavenPluginVersionChoice: 'latest'
-
-- task: NexusIqPipelineTask@1
-  inputs:
-        nexusIqService: 'iq-server'
-        applicationId: 'Struts2-RCE'
-        stage: 'Build'
