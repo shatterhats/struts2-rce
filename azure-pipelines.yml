@@ -2,12 +2,6 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 
- task: NexusIqPipelineTask@1
-  inputs:
-    nexusIqService: 'test'
-    applicationId: 'test'
-    stage: 'Build'
-# https://aka.ms/yaml
 
 steps:
 - script: echo Hello, world!
