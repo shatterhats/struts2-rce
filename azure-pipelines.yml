@@ -27,5 +27,5 @@ steps:
 - task: NexusIqPipelineTask@1
   inputs:
     nexusIqService: 'iq-server'
-    applicationId: 'Struts2-RCE'
+    applicationId: 'struts2-rce__shatterhats'
     stage: 'Build'
